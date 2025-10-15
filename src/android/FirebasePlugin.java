@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationManagerCompat;
-//import android.support.annotation.NonNull;
-//import android.support.v4.app.NotificationManagerCompat;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
@@ -55,8 +53,6 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 // Crashlytics
-//import com.crashlytics.android.Crashlytics;
-//import io.fabric.sdk.android.Fabric;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 // Dynamic Links
