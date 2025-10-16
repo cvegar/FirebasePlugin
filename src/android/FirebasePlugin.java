@@ -309,7 +309,7 @@ public class FirebasePlugin extends CordovaPlugin {
     cordova.getThreadPool().execute(new Runnable() {
       public void run() {
         try {
-          String currentToken = FirebaseInstanceId.getInstance().getToken();
+          String currentToken = FirebaseMessaging.getInstance().getToken();
           if (currentToken != null) {
             FirebasePlugin.sendToken(currentToken);
             Log.d(TAG, "onTokenRefresh success. token: " + currentToken);
@@ -345,7 +345,7 @@ public class FirebasePlugin extends CordovaPlugin {
     cordova.getThreadPool().execute(new Runnable() {
       public void run() {
         try {
-          String token = FirebaseInstanceId.getInstance().getToken();
+          String token = FirebaseMessaging.getInstance().getToken();
           callbackContext.success(token);
           Log.d(TAG, "getToken success. token: " + token);
         } catch (Exception e) {
@@ -458,7 +458,7 @@ public class FirebasePlugin extends CordovaPlugin {
       public void run() {
         try {
           FirebaseInstanceId.getInstance().deleteInstanceId();
-          String currentToken = FirebaseInstanceId.getInstance().getToken();
+          String currentToken = FirebaseMessaging.getInstance().getToken();
           if (currentToken != null) {
             FirebasePlugin.sendToken(currentToken);
           }
